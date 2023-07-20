@@ -1,0 +1,130 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Crea tres columnas de igual ancho */
+  height: 100vh;
+}
+
+.grid-item {
+  background-color: #ccc;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  background-color: #101529;
+  color: whitesmoke;
+  padding: 0;
+}
+
+.menu {
+  background-color: #ef3c4f;
+  color: whitesmoke;
+  padding: 0;
+}
+
+.hero {
+  background-color: #4c86c6;
+  color: whitesmoke;
+  padding: 50px;
+}
+
+.main {
+  background-color: #24344b;
+  color: whitesmoke;
+  padding: 50px;
+}
+
+.banner {
+  background-color: #ffce6c;
+}
+
+.extra {
+  background-color: #4dbd97;
+}
+
+.image {
+  background-color: #c2e5e3;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr 4fr;
+  }
+  .header {
+    grid-row: 1;
+    grid-column: 1 / span 3;
+  }
+
+  .hero {
+    grid-row: 2;
+    grid-column: 1 / span 3;
+    padding: 10%;
+  }
+
+  .menu {
+    grid-column: 1;
+    grid-row: span 3;
+  }
+
+  .main {
+    grid-column: span 2;
+    padding: 10%;
+  }
+
+  .banner {
+    grid-column: span 2;
+  }
+
+  .extra {
+    grid-column: 2;
+  }
+
+  .image {
+    grid-column: 3;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+  }
+
+  .header {
+    grid-column: 1 / 1;
+  }
+
+  .hero {
+    grid-row: 2;
+    grid-column: span 4;
+  }
+
+  .menu {
+    grid-column: 2 / span 4;
+    grid-row: 1;
+  }
+
+  .main {
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 2;
+    padding: 10px;
+  }
+
+  .banner {
+    grid-row: 5;
+    grid-column: span 4;
+  }
+
+  .extra {
+    grid-column: 4;
+    grid-row: 4;
+  }
+
+  .image {
+    grid-column: 4;
+    grid-row: 3;
+  }
+}
